@@ -148,7 +148,8 @@ body{
     display: none;
 }
 .local-nao-encontrado img{
-    width: 70%;
+    width: 50%;
+    height: auto;
 }
 .local-nao-encontrado p{
     color:#111;

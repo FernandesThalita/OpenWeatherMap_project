@@ -39,6 +39,35 @@ pesquisaButton.addEventListener("click", () => {
         //removendo a animacao caso não identifique o if do erro 404
         local_nao_encontrado.classList.remove('fadeIn');
 
+
+        //coletando tags do resultado de uma pequisa encontrada
+        const imagem = document.querySelector('.box-clima img');
+        const temperatura = document.querySelector('.box-clima .temperatura');
+        const descricao = document.querySelector('.box-clima .descricao');
+        const humidade = document.querySelector('.clima-box .humidade span');
+        const vento = document.querySelector('.clima-box .vento span');
+
+        //switch que utiliza um atributo do indice zero de um arrey da API (que informa a situacao geral do clima)
+        switch (data.weather[0].main) {
+            case 'Clear':
+                imagem.src = 'img/icons8-sun-400.png';
+                break;
+                
+            case 'Rain':
+                imagem.src = 'img/icons8-rain-100.png';
+                break;
+
+            case 'Snow':
+                imagem.src = 'img/icons8-cold-100.png';
+                break;
+
+            case 'Clouds':
+                imagem.src = 'img/icons8-clouds-100.png';
+                break;
+
+
+        }
+
     })
 
 })
