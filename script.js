@@ -52,7 +52,7 @@ pesquisaButton.addEventListener("click", () => {
             case 'Clear':
                 imagem.src = 'img/icons8-sun-400.png';
                 break;
-                
+
             case 'Rain':
                 imagem.src = 'img/icons8-rain-100.png';
                 break;
@@ -65,9 +65,32 @@ pesquisaButton.addEventListener("click", () => {
                 imagem.src = 'img/icons8-clouds-100.png';
                 break;
 
+            case 'Haze':
+                imagem.src = 'img/icons8-haze-100.png';
+                break;
 
-        }
+              default:
+                imagem.src='';  
 
-    })
+        };
 
-})
+
+        //Tag temperatura receberá o valor da temperatura da cidade pesquisada, convertido de string para int
+        temperatura.innerHTML = `${parseInt(data.main.temp)} <span>°C </span>`;
+        //Tag descricao receberá o valor da descricao do clima, da cidade pesquisada
+        descricao.innerHTML = `${(data.weather[0].description)}`;
+        //Tag vento receberá o valor da velocidade do vento, da cidade pewsquisada,convertido de string para int
+        vento.innerHTML = `${parseInt(data.wind.speed)}Km/h`;
+        //Tag humidade receberá o valor da humidade, da cidade pesquisada
+        humidade.innerHTML = `${(data.main.humidity)}%`;
+
+        box_clima.style.display = '';
+        detalhes_clima.style.display = '';
+        box_clima.classList.add('fade-in');
+        detalhes_clima.classList.add('fade-in');
+        container.style.height = '590px';
+
+
+    });
+
+});
