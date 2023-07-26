@@ -44,8 +44,8 @@ pesquisaButton.addEventListener("click", () => {
         const imagem = document.querySelector('.box-clima img');
         const temperatura = document.querySelector('.box-clima .temperatura');
         const descricao = document.querySelector('.box-clima .descricao');
-        const humidade = document.querySelector('.clima-box .humidade span');
-        const vento = document.querySelector('.clima-box .vento span');
+        const humidade = document.querySelector('.detalhes-clima .humidade span');
+        const vento = document.querySelector('.detalhes-clima .vento span');
 
         //switch que utiliza um atributo do indice zero de um arrey da API (que informa a situacao geral do clima)
         switch (data.weather[0].main) {
@@ -78,11 +78,11 @@ pesquisaButton.addEventListener("click", () => {
         //Tag temperatura receberá o valor da temperatura da cidade pesquisada, convertido de string para int
         temperatura.innerHTML = `${parseInt(data.main.temp)} <span>°C </span>`;
         //Tag descricao receberá o valor da descricao do clima, da cidade pesquisada
-        descricao.innerHTML = `${(data.weather[0].description)}`;
+        descricao.innerHTML = `${data.weather[0].description}`;
         //Tag vento receberá o valor da velocidade do vento, da cidade pewsquisada,convertido de string para int
         vento.innerHTML = `${parseInt(data.wind.speed)}Km/h`;
         //Tag humidade receberá o valor da humidade, da cidade pesquisada
-        humidade.innerHTML = `${(data.main.humidity)}%`;
+        humidade.innerHTML = `${data.main.humidity}%`;
 
         box_clima.style.display = '';
         detalhes_clima.style.display = '';
