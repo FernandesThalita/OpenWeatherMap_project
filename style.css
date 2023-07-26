@@ -22,7 +22,7 @@ body{
 .container{
     position: relative;
     width: 400px;
-    height: 605px;
+    height: 105px;
     background-color: var(--brancoColor);
     overflow: hidden;
     padding: 28px 32px;
@@ -160,4 +160,15 @@ body{
 .box-clima, .detalhes-clima{
     scale: 0;
     opacity: 0;
+}
+/* ANIMACAO FADE IN */
+.fade-in{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+@keyframes fadeIn{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
 }
