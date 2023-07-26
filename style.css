@@ -1,0 +1,163 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --brancoColor: #fff;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(96, 25, 102);
+    justify-content: center;
+}
+
+/* CONTAINER DE TODO CONTEUDO */
+.container{
+    position: relative;
+    width: 400px;
+    height: 605px;
+    background-color: var(--brancoColor);
+    overflow: hidden;
+    padding: 28px 32px;
+    border-radius: 25px;
+    transition: 0.6s ease-out; 
+}
+/* BARRA DE PESQUISA */
+.pesquisa_barra{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pesquisa_barra input{
+    border: none;
+    outline: none;
+    color: #111;
+    width: 80%;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 38px;
+}
+.pesquisa_barra input::placeholder{
+    opacity: 30%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+    text-transform: capitalize;
+}
+.pesquisa_barra button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+    background-color: #111;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+.pesquisa_barra button:hover{
+    color:  #111;
+    background: #fff;
+}
+.pesquisa_barra i{
+    position: absolute;
+    color: #111;
+    font-size: 28px;
+}
+
+/* BOX CLIMA */
+.box-clima{
+    text-align: center;
+}
+.box-clima img{
+    width: 60%;
+    margin-top: 30px;
+}
+.box-clima .temperatura{
+    position: relative;
+    color: #111;
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+.box-clima .temperatura span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+.box-clima .descricao{
+    color: #111;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* DETALHES DO CLIMA */
+.detalhes-clima{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.detalhes-clima .humidade , .vento{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+.detalhes-clima .humidade{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+.detalhes-clima .vento{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+.detalhes-clima i{
+    color: #111;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.detalhes-clima span{
+    color: #111;
+    font-size: 22px;
+    font-weight: 500;
+}
+.detalhes-clima p{
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* LOCAL NAO ENCONTRADO */
+.local-nao-encontrado{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+.local-nao-encontrado img{
+    width: 70%;
+}
+.local-nao-encontrado p{
+    color:#111;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+/* //////// */
+.box-clima, .detalhes-clima{
+    scale: 0;
+    opacity: 0;
+}
